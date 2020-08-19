@@ -8,5 +8,13 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <div id="menu">
+            {% block menu %}
+            <a href="{{ url('learning') }}">Go to  homepage</a>
+            <a href="{{ url('aboutMe') }}">Go to about page</a>
+            {% endblock %}
+            <quote> {{ quote()|nl2br }}</quote>
+        </div>
+       <footer> {% block footer %}&copy; BeCode {% endblock%} </footer>
     </body>
 </html>
